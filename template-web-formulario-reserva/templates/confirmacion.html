@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Confirmación de Reserva</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+        <h1>Nombre Agencia</h1>
+        </div>
+        <div class="contenido">
+        <h2>CONFIRMACIÓN DE TU RESERVA</h2>
+        <p>Estimado cliente {{ nombre }}, gracias por reservar tu viaje a {{ destino }} con nuestra agencia.</p>
+        <p>Te esperamos el {{ fecha }} y seguro que pasarás unos días divertidos con nosotros, te servirán para desconectar y volver con las pilas recargadas.</p>
+        <p>Hemos tomado nota de tus necesidades especiales: {{ ', '.join(necesidades) if necesidades else 'Ninguna' }}, que esperamos satisfacer.</p>
+        <p>Nos vemos pronto!!!</p>
+        <p>Vicente</p>
+        </div>
+    </div>
+</body>
+</html>

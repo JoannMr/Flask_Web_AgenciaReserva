@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Reserva Viajes Aventura</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>Nombre Agencia</h1>
+        </div>
+        <div class="contenido1">
+        <form action="{{ url_for('confirmacion') }}" method="post">
+            <h2>Datos Personales</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="direccion">Direccion:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="telefono">Telefono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <h2>Escoge tu destino</h2>
+            <input type="radio" id="destino1" name="destino" value="Canarias" required>
+            <label for="destino1">Canarias</label>
+
+            <input type="radio" id="destino2" name="destino" value="Barcelona" required>
+            <label for="destino2">Barcelona</label>
+
+            <input type="radio" id="destino3" name="destino" value="Madrid" required>
+            <label for="destino3">Madrid</label>
+
+            <h2>Escoger las Fechas</h2>
+            <input type="radio" id="fecha1" name="fecha" value="12/03/2024" required>
+            <label for="fecha1">12/03/2024</label>
+
+            <input type="radio" id="fecha2" name="fecha" value="13/03/2024" required>
+            <label for="fecha2">13/03/2024</label>
+
+            <input type="radio" id="fecha3" name="fecha" value="14/03/2024" required>
+            <label for="fecha3">14/03/2024</label>
+
+            <h2>Necesidades Especiales</h2>
+            <input type="checkbox" id="comidaEspecial" name="necesidades" value="Comida Especial">
+            <label for="comidaEspecial">Comida Especial</label>
+
+            <input type="checkbox" id="camaDoble" name="necesidades" value="Cama Doble">
+            <label for="camaDoble">Cama Doble</label>
+
+            <input type="checkbox" id="primeraFila" name="necesidades" value="Sentarse en Primera Fila">
+            <label for="primeraFila">Sentarse en Primera Fila</label>
+            <div class="registrar">
+                <button type="submit">Registrar Reserva</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
